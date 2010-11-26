@@ -5,7 +5,7 @@
   .edit
     %span
     - Globalize2Extension.locales.map do |locale|
-      = link_to_unless(I18n.locale.to_s == locale, "<img src='/images/admin/#{locale.downcase}.gif' alt='#{locale.upcase}' />", params.merge(:locale => locale))
+      = link_to_unless(I18n.locale.to_s == locale, "<img src='../../../../images/admin/#{locale.downcase}.gif' alt='#{locale.upcase}' />", params.merge(:locale => locale))
       - if !@page.nil? && I18n.locale.to_s == locale
         - if I18n.locale.to_s != Globalize2Extension.default_language
           - if @page.translated_locales.include?(locale.to_sym)
